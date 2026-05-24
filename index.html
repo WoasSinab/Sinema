@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sinema</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<div class="app-shell">
+
+
+  <!-- <div class="menu-overlay"></div> -->
+  <!-- <div class="close-menu"></div> -->
+  
+  <!-- SIDEBAR -->
+  <!-- <aside class="sidebar glass">
+    <div class="side-brand">
+      <span>
+        <img src="Untitled-1.png" alt="Sinema Logo">
+      </span>
+    </div>
+    
+    <nav class="side-menu">
+      <button class="side-item active" data-view="movies"> فیلم‌ها</button>
+      <button class="side-item active" data-view="series"> سریال ها</button>
+      <button class="side-item" data-view="favorites"> موردعلاقه‌ها</button>
+      <button class="side-item" data-view="history"> تاریخچه</button>
+      <button class="side-item theme-toggle" id="randomMovie"> سوپرایزم کن </button>
+    </nav>
+  </aside> -->
+
+  <!-- MAIN -->
+  <div class="app-main">
+
+    <header class="ultra-header">
+
+
+<div class="top-bar">
+
+  
+  <div class="brand">
+    <div class="logo neon">
+      <span>S</span>
+      <span>I</span>
+      <span>N</span>
+      <span>E</span>
+      <span>M</span>
+      <span>A</span>
+    </div>
+  </div>
+  
+  <div class="menu-toggle">☰</div>
+</div>
+
+
+<div class="mobile-menu">
+
+  <div class="toolbar glass">
+    <input id="searchInput" placeholder="جستجوی فیلم..." />
+
+    <select id="filterType">
+      <option value="all">همه نسخه‌ها</option>
+      <option value="softsub">زیرنویس</option>
+      <option value="dubbed">دوبله</option>
+    </select>
+
+    <select id="sortType">
+      <option value="rank">رتبه IMDb</option>
+      <option value="rating">امتیاز IMDb</option>
+    </select>
+
+    <select id="genreFilter">
+      <option value="">همه ژانرها</option>
+      <option value="28">اکشن</option>
+      <option value="12">ماجراجویی</option>
+      <option value="35">کمدی</option>
+      <option value="18">درام</option>
+      <option value="10749">عاشقانه</option>
+      <option value="27">ترسناک</option>
+      <option value="878">علمی تخیلی</option>
+      <option value="53">هیجانی</option>
+  </select>
+
+  </div>
+
+</div>
+
+
+</header>
+
+
+    </header>
+
+    <main id="movieGrid" class="movie-grid"></main>
+
+    <div class="load-zone">
+      <button id="loadMoreBtn">نمایش بیشتر</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="movieModal" class="modal hidden">
+  <div class="modal-card glass">
+    <div>
+      <span id="closeModal">✕</span>
+      <!-- <button id="addToFavorites" class="favorite-btn">
+  ⭐        افزودن به علاقه‌مندی‌ها
+      </button> -->
+    </div>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div class="bottom-dock" id="bottomNavContainer">
+  <button class="side-item dock-item" data-view="movies">
+    <!-- <i class="icon">🎬</i> -->
+    <span>فیلم‌ها</span>
+  </button>
+
+  <button class="side-item dock-item" data-view="series">
+    <!-- <i class="icon">📺</i> -->
+    <span>سریال‌ها</span>
+  </button>
+
+  <button class="side-item dock-item" data-view="favorites">
+    <!-- <i class="icon">❤️</i> -->
+    <span>علاقه‌مندی</span>
+  </button>
+
+  <!-- <button class="side-item dock-item" data-view="history">
+    <span>تاریخچه</span>
+  </button> -->
+
+  <button class="side-item dock-item theme-toggle" id="randomMovie">
+    <!-- <i class="icon">✨</i> -->
+    <span>سوپرایز</span>
+  </button>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
