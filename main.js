@@ -1,4 +1,4 @@
-const { app, BrowserWindow, shell, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, shell, ipcMain, dialog , nativeTheme } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
 const fs = require('fs');
@@ -43,8 +43,13 @@ const openWithVLC = (url) => {
 };
 
 function createWindow() {
-  const win = new BrowserWindow({
+  
+    const win = new BrowserWindow({
     width: 1200, height: 800,
+    // این خط رو اضافه کن (مطمئن شو مسیر فایل‌های .ico درسته)
+    icon: nativeTheme.shouldUseDarkColors 
+          ? path.join(__dirname, 'assets', 'sinema-icon-light.ico') 
+          : path.join(__dirname, 'assets', 'sinema-icon-dark.ico'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
