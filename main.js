@@ -53,8 +53,8 @@ function createWindow() {
     // titleBarStyle: 'hidden',
     // این خط رو اضافه کن (مطمئن شو مسیر فایل‌های .ico درسته)
     icon: nativeTheme.shouldUseDarkColors 
-          ? path.join(__dirname, 'assets', 'sinema-icon-light.ico') 
-          : path.join(__dirname, 'assets', 'sinema-icon-dark.ico'),
+          ? path.join(__dirname, 'assets', 'icon.ico') 
+          : path.join(__dirname, 'assets', 'icon.ico'),
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,

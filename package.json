@@ -37,18 +37,11 @@
         "filter": [
           "**/*"
         ]
-      },
-      {
-        "from": "resources/mpv/",
-        "to": "resources/mpv",
-        "filter": [
-          "**/*"
-        ]
       }
     ],
     "win": {
       "target": "nsis",
-      "icon": "./logo2.ico"
+      "icon": "./assets/icon.ico"
     }
   }
 }
